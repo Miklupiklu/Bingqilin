@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Title of the document</title>
+    <!-- Material Icon CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Used as an example only to position the footer at the end of the page.
+    You can delete these styles or move it to your custom css file -->
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      main {
+        flex: 1 0 auto;
+      }
+
+      h1 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: red;
+        text-shadow: rgb(75, 73, 73) 2px 2px;
+      }
+
+      /* Hide the content initially */
+      #hiddenContent {
+        display: none;
+        text-align: center; /* Center the text and video */
+      }
+
+      /* Center the paragraph and image */
+      #initialContent {
+        text-align: center;
+        margin-top: 20px; /* Add some spacing above the image and paragraph */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="red">
+        <div class="nav-wrapper">
+          <div class="container">
+            <a href="#" class="brand-logo">Bīng qí lín<i class="material-icons prefix">icecream</i></a>
+            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#">John Cena's ice cream store</a></li>
+              <li><a href="#">Top 10 ice cream facts</a></li>
+              <li><a href="#">How to eat ice cream</a></li>
+              <li><a href="#">Ice cream lore</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-menu">
+              <li>
+                <div class="userView">
+                  <div class="background">
+                    <img src="http://lorempixel.com/output/abstract-q-c-640-480-10.jpg" alt="Background Sidenav">
+                  </div>
+                  <a href="#!user"><img class="circle" src="http://lorempixel.com/output/people-q-c-640-480-9.jpg" alt="User Image Sidenav"></a>
+                  <a href="#!name"><span class="white-text name">John Doe</span></a>
+                  <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                </div>
+              </li>
+              <li><a href="#">John Cena's ice cream store</a></li>
+              <li><a href="#">Top 10 ice cream facts</a></li>
+              <li><a href="#">How to eat ice cream</a></li>
+              <li><a href="#">Ice cream lore</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Button to show hidden content -->
+      <center>
+        <button id="showButton" class="btn red">Show Content</button>
+      </center>
+
+      <!-- Initial visible content (image and paragraph) -->
+      <div id="initialContent">
+        <p style="color: red;">Press the button to be receive Trump's blessing.</p>
+        <img src="trmpu.PNG" alt="Ice Cream" />
+      </div>
+
+      <!-- Hidden content -->
+      <div id="hiddenContent">
+        <h1>John Cena's epic <abbr title="Bīng qí lín">ice cream</abbr> page</h1>
+
+        <video class="responsive-video" controls>
+          <source src="John cena bing chilling (ORIGINAL 1080p).mp4" type="video/mp4"/>
+        </video>
+      </div>
+    </main>
+
+    <!--Footer starts here-->
+    <footer class="page-footer red">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m8 l6">
+            <h5 class="white-text">Wǒmen xǐhuān bīngqílín!</h5>
+            <p class="grey-text text-lighten-4">Wǒmen yào chīfàn bīngqílín!</p>
+          </div>
+          <div class="col s12 m4 l6">
+            <h5 class="white-text">Nǐ xǐhuān bīngqílín ma?</h5>
+            <p class="grey-text text-lighten-4">Nǐ yào chīfàn bīngqílín ma?</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2017 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Materialize JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".button-collapse").sideNav();
+
+        // Show the hidden content and hide the initial content when the button is clicked
+        $("#showButton").click(function(){
+          $("#hiddenContent").slideDown();
+          $("#initialContent").slideUp(); // Hide the image and paragraph
+          $(this).hide(); // Hide the button after clicking
+        });
+      });
+    </script>
+  </body>
+</html>
